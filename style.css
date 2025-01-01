@@ -1,0 +1,407 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #f3f3f3;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    background-image: url('image/Travel.jpeg');
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    backface-visibility: calc();
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    font-family: 'Poppins';
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header .logo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff5722;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    background: url('background.jpg') no-repeat center center/cover;
+}
+
+.hero .content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero .content h1 {
+    font-size: 2.5rem;
+    color: #000; /* Black color for the heading */
+}
+
+.hero .content p {
+    font-size: 1.2rem;
+    color: #000; /* Black color for the paragraph */
+}
+
+
+/* Main Content Section */
+main {
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+main .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+main .button:hover {
+    background-color: #e64a19;
+}
+
+
+
+h1{
+    font-family: 'Poppins', 'sans-serif';
+    color: white;
+    /* font-family: 'Oswald','Roboto'; */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h2{
+    font-family: 'Poppins', 'sans-serif';
+    color: black;
+    /* font-family: 'Oswald','Roboto'; */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.login_form input[type="text"],
+.login_form input[type="password"],
+.login_form input[type="submit"]{ 
+    padding : 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.about_desc h3{
+    color: black;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+#box1{
+    color: white;
+    border: 2px outset;
+    border-radius: 20px;
+    width: 500px;
+    height: 350px;
+    background-color:black ;
+    padding-left: 80px;
+    padding-top: 20px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#box2{
+    color: white;
+    border: 2px outset;
+    border-radius: 20px;
+    width: 450px;
+    height: 490px;
+    background-color:black ;
+    padding-left: 80px;
+    padding-top: 20px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#box3{
+    color: black;
+    padding-left: 80px;
+    padding-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+.btn {
+    background:#333;
+    border-radius: 6px;
+    color: skyblue;
+    font-size: 14.5px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    text-align-last: left;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+
+}
+
+.btn:hover{
+    background-color:black;
+}
+
+
+
+.AdminBox,
+.UserBox{
+    font-size: 'sans-serif';
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: center ;
+}
+
+.AdminBox th,
+.UserBox th{
+    font-family: 'sans-serif';
+    background-color:  black;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    text-align: left;
+}
+
+.AdminBox td,
+.UserBox td {
+  color: #000;
+  font-weight: bold;
+  font-family:'sans-serif';
+  padding: 15px;
+  border: 2px solid;
+  text-align: left;
+}
+
+/* Packages Section */
+.packages {
+    padding: 40px 20px;
+    /* background-color: #f9f9f9; */
+    text-align: center;
+}
+
+.package-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.package {
+    
+    /* background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px; */
+    padding: 20px;
+    width: calc(100% - 40px);
+    max-width: 300px;
+    box-shadow: 0 2px 5px #0703581a;
+    text-align: left;
+}
+
+.package img {
+    /* width: 100%;
+    height: auto; */
+    border-radius: 5px;
+}
+
+.package h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    color: navy;
+}
+
+.package p {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+}
+
+.package .button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.package .button:hover {
+    background-color: #0056b3;
+}
+
+
+.reviews {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Increased spacing between reviews */
+    align-items: center;
+}
+
+.review {
+    width: 100%;
+    max-width: 600px;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    text-align: left;
+    
+}
+
+.review h3 {
+    margin-bottom: 20px; /* Spaced below the review name */
+    font-size: 1.2rem;
+}
+
+.review p {
+    margin: 10px 0; /* Added more spacing between paragraphs */
+    font-size: 1rem;
+    color: #555;
+}
+
+.review small {
+    color: #999;
+}
+
+.add-review form textarea,
+.add-review form input[type="text"],
+.add-review form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* Increased spacing between form inputs */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-review form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Spacing above the button */
+    margin-bottom: 30px; /* Spacing below the button to separate it from the review section */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero .content h1 {
+        font-size: 2rem;
+    }
+
+    .hero .content p {
+        font-size: 1rem;
+    }
+
+    .package {
+        width: calc(100% - 20px);
+    }
+}
+
+.add-to-cart-button {
+    background-color: rgb(67, 169, 223);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.add-to-cart-button:hover {
+    background-color: #214c88;
+}
+
+.delete-icon{
+    float:right;
+    width: 10%;
+    height: 10%;
+}
