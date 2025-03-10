@@ -14,11 +14,10 @@
 
         <a href="admin_dashboard.php" class="logo">Book My Trip</a>
         <nav class="navbar">
-            <a href="home.php">Home</a>
+            <a href="admin_dashboard.php">Home</a>
             <a href='about.php'><About></a>
             <a href='ShowUsers.php'>Users</a>
             <a href="Admin_package.php">Package</a>
-            <a href="review.php">Review</a>
             <a href='index.php'>Login</a>
         </nav>
     </section>

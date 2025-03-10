@@ -8,10 +8,10 @@
     <section class="header">
         <a href="index.php" class="logo">Book My Trip</a>
         <nav class="navbar">
-            <a href="index.php">Home</a>
+            <a href="home.php">Home</a>
             <a href="about.php">About</a>
             <a href="package.php">Package</a>
-            <a href="cart.php">Cart</a>
+            <a href="add_to_cart.php">Cart</a>
             <a href="review.php">Review</a>
         </nav>
     </section>
@@ -25,7 +25,7 @@
     <section class="add-review">
         <h2>Share Your Experience</h2>
         <form action="add_review.php" method="POST">
-            <input type="text" name="User_name" placeholder="Your Name" required>
+            <input type="text" name="User_name" placeholder="Username" required>
             <textarea name="review_text" placeholder="Write your review here..." required></textarea>
             <label for="rating">Rating (1-5):</label>
             <select name="rating" required>
@@ -45,7 +45,10 @@
     include 'DBconnect.php';
 
     // Fetch all reviews
-    $sql = "SELECT * FROM Review ORDER BY Review_id DESC";
+    $sql = "SELECT r.Comments, r.Rating, u.UserName 
+        FROM Review r 
+        JOIN User u ON r.User_id = u.UserID 
+        ORDER BY r.Review_id DESC";;
     $result = $conn->query($sql);
     ?>
 
@@ -56,7 +59,7 @@
             if ($result && $result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="review">';
-                    echo '<h3>' . htmlspecialchars($row['User_name']) . '</h3>';
+                    echo '<h3>' . htmlspecialchars($row['UserName']) . '</h3>';
                     echo '<p>' . htmlspecialchars($row['Comments']) . '</p>';
                     echo '<p>Rating: ' . str_repeat('⭐️', (int)$row['Rating']) . '</p>';
                     echo '</div>';

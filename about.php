@@ -13,7 +13,7 @@
             <a href="home.php">Home</a>
             <a href="about.php">About</a>
             <a href="package.php">Package</a>
-            <a href="cart.php">Cart</a>
+            <a href="add_to_cart.php">Cart</a>
             <a href="review.php">Review</a>
             <a href="index.php">Login</a>
         </nav>

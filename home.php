@@ -18,7 +18,7 @@
             <a href="home.php">Home</a>
             <a href="about.php">About</a>
             <a href="package.php">Package</a>
-            <a href="cart.php">Cart</a>
+            <a href="add_to_cart.php">Cart</a>
             <a href="review.php">Review</a>
             <a href="index.php">Login</a>
         </nav>
@@ -29,7 +29,7 @@
         <div class="content">
             <h1>Explore the World with Us</h1>
             <p>Plan your perfect trip and make unforgettable memories!</p>
-            <div class="container"> <div class="search"> <div class="row"> <div class="col-md-6"> <div class="search-1"> <i class='bx bx-search-alt'></i> <input type="text" placeholder="Destination"> </div> </div> <div></div>
+
         </div>
     </section>
     

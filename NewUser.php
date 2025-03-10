@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book My Trip</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 <body>
@@ -49,12 +48,21 @@
 
         $hash= password_hash($password, PASSWORD_DEFAULT);
         
-        $sql = " INSERT INTO user VALUES('$FirstName', '$LastName', '$Email','$PhoneNo','$Username','$hash','$role') ";
+        $sql = " INSERT INTO user (FName, LName, Email, PhoneNo, UserName, Password, Role) VALUES('$FirstName', '$LastName', '$Email','$PhoneNo','$Username','$hash','$role') ";
         
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_affected_rows($conn)>0){
-            header("Location: index.php");
+            $user_id = mysqli_insert_id($conn);
+            $sql_cart = "INSERT INTO cart (Cost, Quantity,package_id, user_id) VALUES(0, 0,Null,'$user_id')";
+            $result_cart = mysqli_query($conn, $sql_cart);
+            if ($result_cart) {
+                header("Location: index.php");  
+            } 
+            else {
+                echo "Cart creation failed";
+                
+            }
         }
         else{
             echo "Insertion Failed";

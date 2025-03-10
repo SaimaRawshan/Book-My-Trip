@@ -51,16 +51,26 @@ if(isset($_POST['FirstName']) && isset($_POST['LastName']) && isset($_POST['Emai
 
 	$hash= password_hash($password, PASSWORD_DEFAULT);
 	
-	$sql = " INSERT INTO user VALUES('$FirstName', '$LastName', '$Email','$PhoneNo','$Username','$hash','$role') ";
+	$sql = " INSERT INTO user (FName, LName, Email, PhoneNo, UserName, Password, Role) VALUES('$FirstName', '$LastName', '$Email','$PhoneNo','$Username','$hash','$role') ";
 	
 	$result = mysqli_query($conn, $sql);
 
 	if (mysqli_affected_rows($conn)>0){
+        $user_id = mysqli_insert_id($conn);
+        $sql_cart = "INSERT INTO cart (Cost, Quantity,package_id, user_id) VALUES(0, 0,Null,'$user_id')";
+        $result_cart = mysqli_query($conn, $sql_cart);
+        if ($result_cart) {
+            header("Location: index.php");  
+        } 
+        else {
+            echo "Cart creation failed";
+            
+        }
 		header("Location: admin_dashboard.php");
 	}
 	else{
 		echo "Insertion Failed";
-		header("Location: NewUser.php");
+		header("Location: Add_new_admin_user.php");
 	}
 }
 ?>
